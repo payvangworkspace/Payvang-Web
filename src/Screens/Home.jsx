@@ -10,6 +10,7 @@ import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
 
 const Home = () => {
+  document.title = "Home - Payvang";
   return (
   <>
   <Navbar/>  

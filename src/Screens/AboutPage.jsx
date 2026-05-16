@@ -7,6 +7,10 @@ import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 function AboutPage() {
+  document.title = "About Payvang - Payvang";
+
+
+
   return (
     <>
       <Navbar />

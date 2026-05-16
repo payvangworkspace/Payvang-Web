@@ -6,6 +6,7 @@ import FAQ from "../Components/FAQ";
 import Footer from "../Components/Footer";
 
 function ContactPage() {
+  document.title = "Contact Payvang - Payvang";
   return (
     <>
       <Navbar />

@@ -158,6 +158,7 @@ const serviceDetails = {
 function ServiceDetail() {
   const { slug } = useParams();
   const service = serviceDetails[slug];
+  document.title = `${service.title} - Payvang`;
 
   if (!service) {
     return (
