@@ -1,9 +1,9 @@
 
-import PageBanner from "../components/PageBanner";
-import Services from "../components/Services";
-import WhyChoose from "../components/WhyChoose";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import PageBanner from "../Components/PageBanner";
+import Services from "../Components/Services";
+import WhyChoose from "../Components/WhyChoose";
+import Contact from "../Components/Contact";
+import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 function ServicesPage() {

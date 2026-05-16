@@ -1,9 +1,9 @@
 
-import PageBanner from "../components/PageBanner";
-import About from "../components/About";
-import WhyChoose from "../components/WhyChoose";
-import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
+import PageBanner from "../Components/PageBanner";
+import About from "../Components/About";
+import WhyChoose from "../Components/WhyChoose";
+import FAQ from "../Components/FAQ";
+import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 function AboutPage() {

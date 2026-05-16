@@ -1,9 +1,9 @@
 import React from "react";    
 import Navbar from "../Components/Navbar";
-import PageBanner from "../components/PageBanner";
-import FAQ from "../components/FAQ";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import PageBanner from "../Components/PageBanner";
+import FAQ from "../Components/FAQ";
+import Contact from "../Components/Contact";
+import Footer from "../Components/Footer";
 
 function FAQPage() {
   return (
