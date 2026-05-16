@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.sd-section {
+  padding: 95px 0 110px;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(19, 87, 216, 0.12), transparent 26%),
+    radial-gradient(circle at 90% 20%, rgba(14, 165, 233, 0.12), transparent 24%),
+    linear-gradient(180deg, #f8fbff 0%, #ffffff 45%, #f7faff 100%);
+  font-family: "Manrope", sans-serif;
+}
+
+.sd-container {
+  width: min(90%, 1180px);
+  margin: 0 auto;
+}
+
+.sd-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 34px;
+  align-items: start;
+}
+
+.sd-main {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  min-width: 0;
+}
+
+/* Top intro card */
+.sd-heading {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 38px;
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 251, 255, 0.94));
+  border: 1px solid rgba(211, 225, 245, 0.95);
+  box-shadow: 0 26px 70px rgba(7, 31, 77, 0.09);
+}
+
+.sd-heading::before {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -90px;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: rgba(19, 87, 216, 0.1);
+}
+
+.sd-icon {
+  position: relative;
+  z-index: 2;
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  color: #ffffff;
+  font-size: 38px;
+  background: linear-gradient(135deg, #1357d8, #0ea5e9);
+  box-shadow: 0 18px 38px rgba(19, 87, 216, 0.28);
+}
+
+.sd-tag {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #e8f1ff;
+  color: #1357d8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.sd-heading h2 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  max-width: 760px;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.12;
+  color: #071f4d;
+  font-weight: 800;
+  letter-spacing: -1.3px;
+}
+
+.sd-intro {
+  margin: 0;
+  padding: 0 6px;
+  max-width: 880px;
+  font-size: 18px;
+  line-height: 1.85;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Cards */
+.sd-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 34px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #e3ebf7;
+  box-shadow: 0 18px 55px rgba(7, 31, 77, 0.065);
+  transition: 0.3s ease;
+}
+
+.sd-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 70px rgba(7, 31, 77, 0.095);
+}
+
+.sd-card h3 {
+  margin: 0 0 18px;
+  font-size: 25px;
+  color: #071f4d;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.sd-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Feature Cards */
+.sd-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.sd-feature {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  border: 1px solid #e5eefb;
+  transition: 0.28s ease;
+}
+
+.sd-feature:hover {
+  transform: translateY(-3px);
+  border-color: rgba(19, 87, 216, 0.22);
+  box-shadow: 0 16px 34px rgba(7, 31, 77, 0.07);
+}
+
+.sd-feature svg {
+  width: 38px;
+  height: 38px;
+  padding: 9px;
+  border-radius: 13px;
+  color: #1357d8;
+  background: #e8f1ff;
+  flex-shrink: 0;
+}
+
+.sd-feature span {
+  font-size: 15px;
+  line-height: 1.45;
+  color: #26364f;
+  font-weight: 800;
+}
+
+/* Benefits */
+.sd-benefit-list {
+  display: grid;
+  gap: 15px;
+}
+
+.sd-benefit {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  border: 1px solid #e5eefb;
+  transition: 0.28s ease;
+}
+
+.sd-benefit:hover {
+  transform: translateX(5px);
+  border-color: rgba(19, 87, 216, 0.22);
+}
+
+.sd-benefit strong {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #1357d8, #0ea5e9);
+  color: #ffffff;
+  font-size: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 10px 22px rgba(19, 87, 216, 0.2);
+}
+
+.sd-benefit span {
+  font-size: 15.5px;
+  line-height: 1.45;
+  color: #26364f;
+  font-weight: 800;
+}
+
+/* Sidebar */
+.sd-sidebar {
+  position: sticky;
+  top: 125px;
+  overflow: hidden;
+  padding: 34px;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.22), transparent 34%),
+    linear-gradient(135deg, #071f4d 0%, #0f3f96 55%, #1357d8 100%);
+  color: #ffffff;
+  box-shadow: 0 30px 75px rgba(7, 31, 77, 0.26);
+}
+
+.sd-sidebar::before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -75px;
+  bottom: -75px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sd-sidebar h3 {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 14px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.sd-sidebar p {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 28px;
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.sd-btn {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 22px;
+  border-radius: 15px;
+  background: #ffffff;
+  color: #071f4d;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.16);
+  transition: 0.3s ease;
+}
+
+.sd-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 1050px) {
+  .sd-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sd-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 650px) {
+  .sd-section {
+    padding: 70px 0 85px;
+  }
+
+  .sd-container {
+    width: 92%;
+  }
+
+  .sd-heading {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+
+  .sd-icon {
+    width: 76px;
+    height: 76px;
+    font-size: 34px;
+  }
+
+  .sd-intro {
+    font-size: 16px;
+  }
+
+  .sd-card {
+    padding: 26px;
+  }
+
+  .sd-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sd-sidebar {
+    padding: 28px;
+  }
+}

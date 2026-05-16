@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+.faq-section {
+  position: relative;
+  padding: 90px 8%;
+  background: linear-gradient(180deg, #fbfdff 0%, #f4f8ff 100%);
+  font-family: "DM Sans", sans-serif;
+  overflow: hidden;
+}
+
+.faq-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.faq-left {
+  position: sticky;
+  top: 110px;
+}
+
+.faq-label {
+  display: inline-flex;
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: #eef5ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.faq-left h2 {
+  margin: 22px 0 18px;
+  font-size: clamp(32px, 3.6vw, 46px);
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #102a56;
+}
+
+.faq-left > p {
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #66758f;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.faq-support-box {
+  max-width: 390px;
+  padding: 28px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #123a78, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.18);
+}
+
+.faq-support-box h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.faq-support-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+.faq-support-box a {
+  display: inline-flex;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #123a78;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.faq-support-box a:hover {
+  transform: translateY(-2px);
+}
+
+.faq-list {
+  display: grid;
+  gap: 18px;
+}
+
+.faq-card {
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e8eef7;
+  box-shadow: 0 14px 36px rgba(16, 42, 86, 0.05);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 48px rgba(16, 42, 86, 0.08);
+}
+
+.faq-card.active {
+  border-color: rgba(37, 99, 235, 0.22);
+  background: #ffffff;
+}
+
+.faq-question-row {
+  width: 100%;
+  padding: 24px 28px;
+  border: none;
+  background: transparent;
+  display: grid;
+  grid-template-columns: 54px 1fr 40px;
+  gap: 18px;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-number {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  background: #f1f6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.faq-card.active .faq-number {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.faq-question-row h3 {
+  font-size: 19px;
+  line-height: 1.45;
+  color: #102a56;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.faq-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: #f1f6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  transition: 0.25s ease;
+}
+
+.faq-card.active .faq-toggle {
+  background: #2563eb;
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.38s ease, opacity 0.28s ease;
+}
+
+.faq-answer > p {
+  overflow: hidden;
+}
+
+.faq-card.active .faq-answer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.faq-answer p {
+  padding: 0 28px 26px 100px;
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: #66758f;
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .faq-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .faq-left {
+    position: static;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-section {
+    padding: 75px 6%;
+  }
+
+  .faq-left h2 {
+    font-size: 31px;
+  }
+
+  .faq-question-row {
+    grid-template-columns: 44px 1fr 34px;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .faq-number {
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .faq-question-row h3 {
+    font-size: 16px;
+  }
+
+  .faq-toggle {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+
+  .faq-answer p {
+    padding: 0 20px 22px;
+    font-size: 15px;
+  }
+}

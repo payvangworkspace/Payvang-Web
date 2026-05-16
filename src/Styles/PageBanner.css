@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap");
+
+.page-banner {
+  width: 100%;
+  min-height: 500px;
+  margin-top: 0;
+  padding: 120px 8% 90px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    115deg,
+    rgba(3, 14, 33, 0.92),
+    rgba(4, 28, 58, 0.82),
+    rgba(0, 102, 255, 0.35)
+  );
+}
+
+.page-banner::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(rgba(0, 183, 255, 0.24), transparent 70%);
+  top: -200px;
+  right: -100px;
+  filter: blur(20px);
+  animation: bannerGlowMove 8s linear infinite;
+}
+
+.page-banner::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(0, 102, 255, 0.2), transparent 70%);
+  bottom: -120px;
+  left: -80px;
+  filter: blur(18px);
+}
+
+.page-banner-content {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.page-banner-text {
+  max-width: 720px;
+  animation: bannerFadeLeft 0.9s ease;
+}
+
+.page-banner-text span {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #8be9ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  margin-bottom: 22px;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+}
+
+.page-banner h1 {
+  color: #ffffff;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.05;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1.8px;
+}
+
+.page-banner p {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  padding: 15px 24px;
+  border-radius: 60px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  animation: bannerFadeRight 0.9s ease;
+}
+
+.page-breadcrumb span:first-child {
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.page-breadcrumb span:first-child:hover {
+  color: #8be9ff;
+}
+
+.page-breadcrumb b,
+.page-breadcrumb .active {
+  color: #8be9ff;
+}
+
+.page-banner-line {
+  position: absolute;
+  z-index: 6;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 4px;
+  /* background: linear-gradient(90deg, #2563eb, #00d8ff, #2563eb); */
+  background-size: 300%;
+  animation: bannerLineMove 6s linear infinite;
+}
+
+@keyframes bannerGlowMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-80px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bannerLineMove {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
+
+@keyframes bannerFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bannerFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .page-banner {
+    min-height: 520px;
+    padding: 100px 6% 80px;
+  }
+
+  .page-banner-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 34px;
+  }
+
+  .page-banner p {
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-banner {
+    min-height: 460px;
+    padding: 85px 6% 70px;
+  }
+
+  .page-banner h1 {
+    font-size: 40px;
+  }
+
+  .page-banner p {
+    font-size: 15px;
+  }
+
+  .page-breadcrumb {
+    padding: 13px 20px;
+    font-size: 14px;
+  }
+}
