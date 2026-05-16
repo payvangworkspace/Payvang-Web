@@ -1,8 +1,15 @@
+import { useState } from "react";
 import "../Styles/Navbar.css";
 import logo from "../assets/logos/logo.png";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMobileOpen(false);
+  };
+
   return (
     <header className="pv-header">
       <div className="pv-topbar">
@@ -26,31 +33,39 @@ function Navbar() {
 
       <nav className="pv-navbar">
         <div className="pv-container pv-nav-content">
-          <NavLink to="/" end className="pv-logo">
+          <NavLink to="/" end className="pv-logo" onClick={closeMenu}>
             <img src={logo} alt="Payvang Logo" />
           </NavLink>
 
-          <ul className="pv-menu">
+          <ul className={`pv-menu ${mobileOpen ? "pv-menu-open" : ""}`}>
             <li>
-              <NavLink to="/" end>
+              <NavLink to="/" end onClick={closeMenu}>
                 Home
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about" onClick={closeMenu}>
+                About
+              </NavLink>
             </li>
 
             <li>
-              <NavLink to="/services">Services</NavLink>
+              <NavLink to="/services" onClick={closeMenu}>
+                Services
+              </NavLink>
             </li>
 
             <li>
-              <NavLink to="/faq">FAQs</NavLink>
+              <NavLink to="/faq" onClick={closeMenu}>
+                FAQs
+              </NavLink>
             </li>
 
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/contact" onClick={closeMenu}>
+                Contact
+              </NavLink>
             </li>
           </ul>
 
@@ -58,6 +73,17 @@ function Navbar() {
             <span>CALL US:</span>
             <strong>+91 7303883194</strong>
           </div>
+
+          <button
+            className={`pv-hamburger ${mobileOpen ? "pv-hamburger-active" : ""}`}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            type="button"
+            aria-label="Toggle Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
     </header>
